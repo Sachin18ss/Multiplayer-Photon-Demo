@@ -29,6 +29,9 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         Debug.Log("Joined Lobby");
 
         PhotonNetwork.JoinRandomRoom();
+        Debug.Log(
+    "Player joined. ActorNumber = " + PhotonNetwork.LocalPlayer.ActorNumber
+);
         //base.OnJoinedLobby();
     }
 
@@ -44,8 +47,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         Debug.Log("Joined Room");
 
-        PhotonNetwork.Instantiate("Player", 
-            new Vector3(Random.Range(-10, 10), 2, Random.Range(-10, 10)), 
+        PhotonNetwork.Instantiate("AkaiEEspiritu", 
+            new Vector3(Random.Range(40, 50), 310, Random.Range(400, 420)), 
             Quaternion.identity);
         //base.OnJoinedRoom();
     }
