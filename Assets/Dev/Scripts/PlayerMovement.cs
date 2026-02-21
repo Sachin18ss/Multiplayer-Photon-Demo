@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviourPun
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        _animator = GetComponent<Animator>();
         if (!photonView.IsMine)
         {
             playerCamera.SetActive(false);
@@ -54,7 +55,10 @@ public class PlayerMovement : MonoBehaviourPun
         if (Input.GetKey(KeyCode.LeftShift) && _isWalking)
         {
             _isRunning = true;
+            Debug.Log("Running is true");
         }
+        else
+
         {
             _isRunning = false;
             
@@ -91,7 +95,7 @@ public class PlayerMovement : MonoBehaviourPun
     {
         float speed = _isRunning ? _runSpeed : _walkSpeed;
 
-        controller.Move(move.normalized * speed * Time.deltaTime);
+        controller.Move(move * speed * Time.deltaTime);
     }
 
 }

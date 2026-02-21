@@ -147,15 +147,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1709946f41695af4f884c15d27e28983, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 46.37
+      value: 45.27294
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1709946f41695af4f884c15d27e28983, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 302.96
+      value: 300.38104
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1709946f41695af4f884c15d27e28983, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 424.13
+      value: 408.50742
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1709946f41695af4f884c15d27e28983, type: 3}
       propertyPath: m_LocalRotation.w
@@ -239,9 +239,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf418c217997d9146bae13dde5b20c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 2
+  _walkSpeed: 2
+  _runSpeed: 5
   playerCamera: {fileID: 6438248781011745418}
-  rotationSpeed: 720
+  rotationSpeed: 90
   gravity: -9.8
 --- !u!114 &934007853812869870
 MonoBehaviour:
@@ -306,4 +307,4 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
