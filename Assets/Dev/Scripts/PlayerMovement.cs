@@ -70,7 +70,6 @@ public class PlayerMovement : MonoBehaviourPun
         }
 
         Vector3 move = transform.forward * z;
-
         
 
         if (controller.isGrounded)
